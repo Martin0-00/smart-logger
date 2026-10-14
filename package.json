@@ -1,0 +1,43 @@
+{
+  "name": "smart-logger",
+  "publisher": "local",
+  "displayName": "smart-logger",
+  "description": "Smart Logger Extension",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.136.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "*"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smart-logger.insertLog",
+        "title": "Insert Smart Log"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "smart-logger.insertLog",
+        "key": "cmd+shift+l",
+        "mac": "cmd+shift+l",
+        "win": "ctrl+shift+l"
+      }
+    ]
+  },
+  "scripts": {
+    "test": "node ./test/runTest.js"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.140.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "mocha": "^10.3.0",
+    "vscode-test": "^1.6.1"
+  }
+}
